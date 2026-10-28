@@ -8,3 +8,4 @@ scikit-learn
 tqdm
 onnx>=1.15.0
 onnxruntime>=1.17.0
+

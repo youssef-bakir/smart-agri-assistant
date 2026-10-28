@@ -47,6 +47,40 @@ IMAGE_SIZE = (256, 256)
 TRAIN_INPUT_SIZE = (224, 224)
 JPEG_QUALITY = 90
 
+# Definitive list of target classes (verified >= 100 training images + unknown)
+CLASSES = [
+    "apple___healthy",
+    "apple___rust",
+    "apple___scab",
+    "corn___leaf_blight",
+    "cotton___diseased",
+    "cotton___healthy",
+    "cucumber___anthracnose",
+    "cucumber___bacterial_wilt",
+    "cucumber___downy_mildew",
+    "cucumber___gummy_stem_blight",
+    "cucumber___healthy",
+    "grape___black_rot",
+    "grape___healthy",
+    "pepper___bacterial_spot",
+    "pepper___healthy",
+    "potato___early_blight",
+    "potato___healthy",
+    "potato___late_blight",
+    "squash___powdery_mildew",
+    "tomato___bacterial_spot",
+    "tomato___early_blight",
+    "tomato___healthy",
+    "tomato___late_blight",
+    "tomato___leaf_mold",
+    "tomato___mosaic_virus",
+    "tomato___septoria_leaf_spot",
+    "tomato___spider_mites",
+    "tomato___target_spot",
+    "tomato___yellow_leaf_curl_virus",
+    "unknown",
+]
+
 CAP_LAB_PER_CLASS = 500
 CAP_FIELD_PER_CLASS = 1500
 CAP_UNKNOWN = 3000
@@ -78,3 +112,4 @@ FEATURE_SOIL = os.getenv("FEATURE_SOIL", "true").lower() == "true"
 ENV = os.getenv("ENV", "dev")
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-insecure-secret-key-change-in-production")
 DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{BASE_DIR / 'app.db'}")
+
