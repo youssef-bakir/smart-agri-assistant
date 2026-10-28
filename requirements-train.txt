@@ -1,0 +1,10 @@
+# Smart Agri Assistant - Training Dependencies (Kaggle GPU)
+torch
+torchvision
+timm>=1.0.0
+numpy
+pillow
+scikit-learn
+tqdm
+onnx>=1.15.0
+onnxruntime>=1.17.0

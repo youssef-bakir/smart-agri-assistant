@@ -1,0 +1,37 @@
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Datasets and processed data (never commit large raw files or pack)
+data/*
+!data/.gitkeep
+
+# Models (weights and exports are stored locally / Kaggle, not in git)
+models/*
+!models/.gitkeep
+
+# Environment variables and secrets
+.env
+*.env
+!.env.example
+
+# Database
+*.db
+*.sqlite3
+
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/

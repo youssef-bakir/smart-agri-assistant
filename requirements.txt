@@ -1,0 +1,30 @@
+# Smart Agri Assistant - Local Application & Data Preparation Requirements
+# Python 3.11 pinned dependencies
+
+# Core & Utilities
+numpy==2.4.6
+pillow==13.0.0
+scikit-learn==1.9.1
+scipy==1.17.1
+joblib==1.6.0
+tqdm==4.70.1
+
+# Data Download
+kaggle==2.2.5
+
+# Web App Backend
+fastapi==0.162.0
+uvicorn==0.54.0
+python-multipart==0.0.32
+pydantic==2.14.1
+pydantic-core==2.50.1
+sqlalchemy==2.1.6
+argon2-cffi==25.1.0
+itsdangerous==2.2.0
+
+# Inference
+onnxruntime==1.31.1
+
+# Testing
+pytest==9.2.0
+httpx==0.28.1
