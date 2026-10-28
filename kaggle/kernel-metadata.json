@@ -1,0 +1,17 @@
+{
+  "id": "youssefbakir/smart-agri-training",
+  "title": "Smart Agri Training",
+  "code_file": "2_train.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "youssefbakir/smart-agri-pack"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

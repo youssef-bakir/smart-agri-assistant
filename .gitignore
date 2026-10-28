@@ -9,6 +9,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
+*.log
 
 # Datasets and processed data (never commit large raw files or pack)
 data/*
