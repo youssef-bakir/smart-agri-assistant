@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تشخيص الأمراض | Smart Agri Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="/index.html" class="nav-brand">
+      <span style="font-size: 1.5rem;">🌱</span>
+      <span data-i18n="app_name">المساعد الزراعي الذكي</span>
+    </a>
+    <nav class="nav-links">
+      <a href="/index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+      <a href="/diagnose.html" class="nav-link active" data-i18n="nav_diagnose">تشخيص الأمراض</a>
+      <button id="lang-toggle-btn" class="btn-lang" title="تغيير اللغة">English</button>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    
+    <header class="diagnose-header">
+      <h1 data-i18n="diagnose_title">تشخيص مرض الورقة</h1>
+      <p data-i18n="diagnose_subtitle">التقط صورة مقربة لورقة النبات المشتبه بإصابتها للحصول على تحليل فوري وتوجيهات عملية.</p>
+    </header>
+
+    <!-- Upload Drop Zone (Idle State) -->
+    <div id="upload-zone" class="upload-card">
+      <input type="file" id="file-input" class="file-input" accept="image/*">
+      <div class="upload-icon">📷</div>
+      <div class="upload-prompt" data-i18n="upload_drop_zone">اسحب الصورة وأفلتها هنا، أو اضغط للاختيار</div>
+      <div class="upload-sub" data-i18n="upload_hint">الصيغ المدعومة: JPG, PNG, WEBP (الحجم الأقصى 8 ميجابايت)</div>
+      <button type="button" class="btn-secondary" data-i18n="upload_file_button">اختر صورة</button>
+    </div>
+
+    <!-- Image Preview Zone -->
+    <div id="preview-container" class="preview-container">
+      <img id="preview-img" class="preview-img" alt="Selected leaf preview">
+      <div class="preview-actions">
+        <button id="btn-analyze" class="btn-primary" data-i18n="btn_analyze">فحص وتشخيص الصورة</button>
+        <button id="btn-change-photo" class="btn-secondary" data-i18n="btn_change_photo">تغيير الصورة</button>
+      </div>
+    </div>
+
+    <!-- Loading State -->
+    <div id="loading-box" class="loading-box">
+      <div class="spinner"></div>
+      <h3 data-i18n="loading_title">جاري التحليل والمعالجة...</h3>
+      <p style="color: var(--text-muted); margin-top: 0.5rem;" data-i18n="loading_desc">يقوم النموذج بفحص ملامح الورقة ومقارنتها بقاعدة البيانات.</p>
+    </div>
+
+    <!-- Result Display Card -->
+    <div id="result-box" class="result-box">
+      <div class="result-header">
+        <span id="status-badge" class="status-badge-banner">الحالة</span>
+        <h2 id="result-main-title">المحصول — المرض</h2>
+        <p id="result-main-desc" class="result-desc"></p>
+      </div>
+
+      <!-- Reliability Warning Banner -->
+      <div id="reliability-banner" class="reliability-banner" style="display: none;">
+        <strong id="reliability-title" style="display: block; margin-bottom: 0.25rem;"></strong>
+        <span id="reliability-desc"></span>
+      </div>
+
+      <!-- Visible Symptoms -->
+      <div id="symptoms-block" class="detail-section" style="display: none;">
+        <h4 data-i18n="symptoms_title">الأعراض الظاهرية المميزة:</h4>
+        <p id="symptoms-text"></p>
+      </div>
+
+      <!-- Cultural & Management Advice -->
+      <div id="advice-block" class="detail-section" style="display: none;">
+        <h4 data-i18n="advice_title">الإرشادات والتوصيات الزراعية:</h4>
+        <p id="advice-text"></p>
+      </div>
+
+      <!-- Top-3 Probabilities -->
+      <div class="predictions-section">
+        <h4 id="top-predictions-title" style="margin-bottom: 0.75rem; color: var(--text-main);" data-i18n="top_predictions_title">الاحتمالات الثلاثة الأولى (Top-3):</h4>
+        <div id="predictions-list"></div>
+      </div>
+
+      <!-- Advisory Disclaimer -->
+      <div class="disclaimer-banner" data-i18n="advisory_notice">
+        المعلومات المعروضة هي إرشادات استرشادية أولية فقط ولا تغني عن المعاينة الميدانية من قِبل مهندس أو خبير زراعي.
+      </div>
+
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <button id="btn-scan-another" class="btn-primary" data-i18n="btn_scan_another">فحص ورقة أخرى</button>
+      </div>
+    </div>
+
+    <!-- Photo Taking Tips -->
+    <div class="tips-card">
+      <h4 data-i18n="photo_tips_title">إرشادات لالتقاط صورة دقيقة:</h4>
+      <ul>
+        <li data-i18n="photo_tip_1">صوّر ورقة واحدة واضحة تملأ معظم الإطار.</li>
+        <li data-i18n="photo_tip_2">تأكد من وجود إضاءة طبيعية كافية وتجنب الظلال الشديدة.</li>
+        <li data-i18n="photo_tip_3">تجنب الخلفيات المزدحمة بأشياء غير نباتية كالتربة أو اليد أو الأدوات.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p data-i18n="footer_disclaimer">
+      تنبيه: هذا التطبيق أداة استرشادية تعليمية. يُرجى دائماً استشارة مهندس زراعي مختص قبل اتخاذ أي تدابير مكافحة.
+    </p>
+    <p data-i18n="footer_copyright">
+      المساعد الزراعي الذكي © 2026 — مشروع تخرج الجامعة العربية المفتوحة
+    </p>
+  </footer>
+
+  <script src="/common.js"></script>
+  <script src="/diagnose.js"></script>
+</body>
+</html>

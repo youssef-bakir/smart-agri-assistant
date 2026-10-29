@@ -1,0 +1,392 @@
+{
+  "apple___healthy": {
+    "crop_name": { "ar": "تفاح", "en": "Apple" },
+    "disease_name": { "ar": "سليم وطبيعي", "en": "Healthy" },
+    "symptoms": {
+      "ar": "الأوراق خضراء نضرة بدون بقع أو تشوهات أو اصفرار.",
+      "en": "Leaves are vibrant green with no lesions, deformation, or chlorosis."
+    },
+    "cultural_advice": {
+      "ar": "الحفاظ على برنامج الري المنتظم والتقليم الموسمي لضمان وصول الهواء والشمس للأغصان الداخلية.",
+      "en": "Maintain regular irrigation and seasonal pruning to ensure good airflow and sunlight penetration."
+    },
+    "reviewed": false
+  },
+  "apple___rust": {
+    "crop_name": { "ar": "تفاح", "en": "Apple" },
+    "disease_name": { "ar": "صدأ التفاح", "en": "Apple Rust" },
+    "symptoms": {
+      "ar": "بقع صفراء برتقالية لامعة على السطح العلوي للأوراق، تتطور لبثور صغيرة على السطح السفلي.",
+      "en": "Bright yellow-orange spots on the upper leaf surface, developing into small pustules underneath."
+    },
+    "cultural_advice": {
+      "ar": "إزالة أشجار العرعر القريبة المجاورة للعائل البديل، وجمع الأوراق المصابة المتساقطة وحرقها.",
+      "en": "Remove nearby alternative host juniper trees and collect and destroy fallen diseased leaves."
+    },
+    "reviewed": false
+  },
+  "apple___scab": {
+    "crop_name": { "ar": "تفاح", "en": "Apple" },
+    "disease_name": { "ar": "جرب التفاح", "en": "Apple Scab" },
+    "symptoms": {
+      "ar": "بقع زيتونية داكنة مخملية على الأوراق تؤدي إلى تجعدها وسقوطها المبكر.",
+      "en": "Olive-green to dark velvety lesions on leaves leading to curling and premature leaf drop."
+    },
+    "cultural_advice": {
+      "ar": "تقليم الأغصان لتحسين التهوية، ودفن أو فرم الأوراق المتساقطة في الخريف لمنع تشتية الفطر.",
+      "en": "Prune tree canopies to improve airflow, and rake or shred fallen leaves to prevent overwintering."
+    },
+    "reviewed": false
+  },
+  "corn___leaf_blight": {
+    "crop_name": { "ar": "ذرة", "en": "Corn" },
+    "disease_name": { "ar": "لفحة أوراق الذرة الشمالية", "en": "Northern Leaf Blight" },
+    "symptoms": {
+      "ar": "بقع طويلة مغزلية رمادية أو خضراء مائلة للرمادي على طول الأوراق، تمتد موازية للعروق.",
+      "en": "Long elliptical, grayish-green or tan lesions running parallel to the leaf veins."
+    },
+    "cultural_advice": {
+      "ar": "اتباع دورة زراعية وعدم تكرار زراعة الذرة في نفس الحقل، والحرث العميق للتخلص من بقايا المحصول.",
+      "en": "Practice crop rotation away from corn, and plow under crop residues deeply after harvest."
+    },
+    "reviewed": false
+  },
+  "cotton___diseased": {
+    "crop_name": { "ar": "قطن", "en": "Cotton" },
+    "disease_name": { "ar": "أوراق قطن مصابة بمرض فطري أو بكتيري", "en": "Diseased Cotton Foliage" },
+    "symptoms": {
+      "ar": "ظهور بقع نخرية بنية أو حروق حواف على أوراق نبات القطن.",
+      "en": "Necrotic brown spots, leaf blight, or edge burning on cotton leaves."
+    },
+    "cultural_advice": {
+      "ar": "تنظيم الري وتجنب تراكم المياه الراكدة حول الجذور، والتخلص الفوري من الأوراق المصابة بشدة.",
+      "en": "Regulate irrigation to avoid standing water, and immediately remove heavily infected leaves."
+    },
+    "reviewed": false
+  },
+  "cotton___healthy": {
+    "crop_name": { "ar": "قطن", "en": "Cotton" },
+    "disease_name": { "ar": "سليم وطبيعي", "en": "Healthy" },
+    "symptoms": {
+      "ar": "أوراق قطن خضراء داكنة سليمة تماماً ومفصصة بنمو طبيعي.",
+      "en": "Dark green, fully intact cotton leaves with characteristic healthy lobing."
+    },
+    "cultural_advice": {
+      "ar": "مراقبة النباتات دورياً للكشف المبكر عن أي آفات حشرية، والالتزام بالتسميد المتوازن.",
+      "en": "Inspect plants regularly for early pest signs and maintain balanced nutritional fertilization."
+    },
+    "reviewed": false
+  },
+  "cucumber___anthracnose": {
+    "crop_name": { "ar": "خيار", "en": "Cucumber" },
+    "disease_name": { "ar": "أنثراكنوز الخيار", "en": "Cucumber Anthracnose" },
+    "symptoms": {
+      "ar": "بقع مائية دائرية صفراء أو بنية تتحول إلى نخرية جافة وتتكسر في مركز الورقة (مظهر طلقة الرصاص).",
+      "en": "Circular yellowish or water-soaked spots that turn brown and necrotic, often developing shot-holes."
+    },
+    "cultural_advice": {
+      "ar": "الري بالتنقيط لتجنب بلل المجموع الخضري، واستخدام بذور معتمدة وخالية من المرض، ودورة زراعية سنتين.",
+      "en": "Use drip irrigation to keep foliage dry, plant certified disease-free seeds, and rotate crops for 2 years."
+    },
+    "reviewed": false
+  },
+  "cucumber___bacterial_wilt": {
+    "crop_name": { "ar": "خيار", "en": "Cucumber" },
+    "disease_name": { "ar": "الذبول البكتيري في الخيار", "en": "Bacterial Wilt" },
+    "symptoms": {
+      "ar": "ذبول مفاجئ للأوراق الفردية أثناء النهار وتدليها رغم رطوبة التربة، يليه موت الفرع بالكامل.",
+      "en": "Sudden daytime wilting of individual leaves despite moist soil, progressing rapidly along the vine."
+    },
+    "cultural_advice": {
+      "ar": "مكافحة خنافس الخيار الناقلة للبكتيريا، والتخلص الفوري من النباتات الذابلة لمنع انتشار العدوى.",
+      "en": "Control cucumber beetles that transmit the bacterium, and rogue out infected plants immediately."
+    },
+    "reviewed": false
+  },
+  "cucumber___downy_mildew": {
+    "crop_name": { "ar": "خيار", "en": "Cucumber" },
+    "disease_name": { "ar": "البياض الزغبي في الخيار", "en": "Downy Mildew" },
+    "symptoms": {
+      "ar": "بقع صفراء زاوية محددة بعروق الورقة على السطح العلوي، يقابلها نمو زغبي رمادي أو بنفسجي خفيف أسفلها.",
+      "en": "Angular yellowish lesions constrained by leaf veins on top, with grayish downy growth underneath."
+    },
+    "cultural_advice": {
+      "ar": "تحسين التهوية داخل الصوب الزراعية وتقليل الرطوبة النسبية، والري الصباحي الباكر فقط.",
+      "en": "Improve greenhouse ventilation, lower relative humidity, and irrigate only in early morning."
+    },
+    "reviewed": false
+  },
+  "cucumber___gummy_stem_blight": {
+    "crop_name": { "ar": "خيار", "en": "Cucumber" },
+    "disease_name": { "ar": "لفحة الساق الصمغية", "en": "Gummy Stem Blight" },
+    "symptoms": {
+      "ar": "بقع مائية دائرية إلى غير منتظمة على حواف الأوراق تمتد للداخل مع إفرازات صمغية على السيقان.",
+      "en": "Circular to irregular water-soaked spots starting at leaf margins, with gummy exudate on stems."
+    },
+    "cultural_advice": {
+      "ar": "تجنب جرح النباتات أثناء العمليات الزراعية، وتطبيق دورة زراعية مع محاصيل غير قرعية.",
+      "en": "Avoid wounding vines during cultivation and rotate fields with non-cucurbit crops."
+    },
+    "reviewed": false
+  },
+  "cucumber___healthy": {
+    "crop_name": { "ar": "خيار", "en": "Cucumber" },
+    "disease_name": { "ar": "سليم وطبيعي", "en": "Healthy" },
+    "symptoms": {
+      "ar": "أوراق خضراء عريضة وسميكة بنمو خضري قوي وخالية من أي بقع أو اصفرار بين العروق.",
+      "en": "Broad, vigorous green leaves free of chlorosis, angular spots, or wilting."
+    },
+    "cultural_advice": {
+      "ar": "المحافظة على التسميد البوتاسي المتوازن والري المنتظم لتجنب الإجهاد الحراري.",
+      "en": "Maintain balanced potassium nutrition and consistent watering to prevent moisture stress."
+    },
+    "reviewed": false
+  },
+  "grape___black_rot": {
+    "crop_name": { "ar": "عنب", "en": "Grape" },
+    "disease_name": { "ar": "العفن الأسود في العنب", "en": "Grape Black Rot" },
+    "symptoms": {
+      "ar": "بقع دائرية صغيرة بنية محمرة على الأوراق، يظهر داخلها نقط سوداء صغيرة دقيقة (الأجسام الثمرية).",
+      "en": "Small circular reddish-brown spots with tiny black fruiting specks (pycnidia) arranged inside."
+    },
+    "cultural_advice": {
+      "ar": "تقليم الشجيرات لزيادة تخلل الشمس والرياح، وجمع العناقيد المحنطة والأوراق المصابة والتخلص منها.",
+      "en": "Prune vines to maximize sun and air exposure, and remove all mummified berries and infected leaves."
+    },
+    "reviewed": false
+  },
+  "grape___healthy": {
+    "crop_name": { "ar": "عنب", "en": "Grape" },
+    "disease_name": { "ar": "سليم وطبيعي", "en": "Healthy" },
+    "symptoms": {
+      "ar": "أوراق عنب خضراء زاهية مفصصة خالية تماماً من العفن أو البقع البنية.",
+      "en": "Vibrant green, healthy lobed grape leaves free of fungal lesions or mummified berries."
+    },
+    "cultural_advice": {
+      "ar": "التربية الجيدة على الأسلاك والتقليم الشتوي المتقن لحماية المحصول القادم.",
+      "en": "Ensure proper trellis training and rigorous winter pruning to maintain canopy health."
+    },
+    "reviewed": false
+  },
+  "pepper___bacterial_spot": {
+    "crop_name": { "ar": "فلفل", "en": "Pepper" },
+    "disease_name": { "ar": "التبقع البكتيري في الفلفل", "en": "Bacterial Spot" },
+    "symptoms": {
+      "ar": "بقع صغيرة مائية خضراء داكنة تتحول إلى بنية ذات مراكز جافة ومتقرحة على الأوراق.",
+      "en": "Small, water-soaked dark green spots turning brown with necrotic centers and yellow halos."
+    },
+    "cultural_advice": {
+      "ar": "زراعة شتلات معتمدة خالية من الأمراض، وتجنب العمل في الحقل أو لمس النباتات عندما تكون الأوراق مبللة.",
+      "en": "Use certified clean transplants and avoid handling or working among plants while foliage is wet."
+    },
+    "reviewed": false
+  },
+  "pepper___healthy": {
+    "crop_name": { "ar": "فلفل", "en": "Pepper" },
+    "disease_name": { "ar": "سليم وطبيعي", "en": "Healthy" },
+    "symptoms": {
+      "ar": "أوراق خضراء لامعة متجانسة وخالية من أي بثور أو تشوهات.",
+      "en": "Glossy green, uniform foliage free from mottling, leaf drop, or necrotic spots."
+    },
+    "cultural_advice": {
+      "ar": "الري المعتدل بدون تغريق لتفادي أعفان الجذور، وضمان تصريف جيد للتربة.",
+      "en": "Provide regular moderate irrigation without waterlogging to prevent root rot disorders."
+    },
+    "reviewed": false
+  },
+  "potato___early_blight": {
+    "crop_name": { "ar": "بطاطس", "en": "Potato" },
+    "disease_name": { "ar": "اللفحة المبكرة في البطاطس", "en": "Early Blight" },
+    "symptoms": {
+      "ar": "بقع بنية إلى سوداء على الأوراق المسنة تظهر عليها حلقات دائرية متداخلة تشبه لوحة الهدف.",
+      "en": "Dark brown spots with characteristic concentric rings creating a target-board pattern on older leaves."
+    },
+    "cultural_advice": {
+      "ar": "المحافظة على خصوبة التربة وتجنب نقص النيتروجين المجهد للنبات، والري عند قاعدة الساق.",
+      "en": "Maintain optimal plant vigor with balanced nitrogen, and irrigate at ground level to avoid wetting foliage."
+    },
+    "reviewed": false
+  },
+  "potato___healthy": {
+    "crop_name": { "ar": "بطاطس", "en": "Potato" },
+    "disease_name": { "ar": "سليم وطبيعي", "en": "Healthy" },
+    "symptoms": {
+      "ar": "مجموع خضري كثيف أخضر سليم وخالٍ من الذبول أو الحروق الهامشية.",
+      "en": "Dense, healthy green potato foliage with no signs of blighting, wilting, or yellowing."
+    },
+    "cultural_advice": {
+      "ar": "التغطية الجيدة بالتربة (الترديم) حول السيقان لحماية الدرنات النامية من الضوء والآفات.",
+      "en": "Hill up soil around stems properly to protect expanding tubers from greening and pests."
+    },
+    "reviewed": false
+  },
+  "potato___late_blight": {
+    "crop_name": { "ar": "بطاطس", "en": "Potato" },
+    "disease_name": { "ar": "اللفحة المتأخرة في البطاطس", "en": "Late Blight" },
+    "symptoms": {
+      "ar": "بقع مائية بنية داكنة سريعة الانتشار على حواف الأوراق مع نمو فطر أبيض رمادي خفيف عند الرطوبة العالية.",
+      "en": "Rapidly spreading irregular water-soaked dark lesions with pale white mildew on the undersides during high humidity."
+    },
+    "cultural_advice": {
+      "ar": "إتلاف نباتات البطاطس المصابة فوراً، وزراعة تقاوي معتمدة، وتجنب الري الرشاش في الأجواء الباردة الرطبة.",
+      "en": "Destroy cull piles and infected plants immediately, plant certified seed tubers, and avoid overhead sprinkler watering in cool weather."
+    },
+    "reviewed": false
+  },
+  "squash___powdery_mildew": {
+    "crop_name": { "ar": "كوسة / قرع", "en": "Squash" },
+    "disease_name": { "ar": "البياض الدقيقي", "en": "Powdery Mildew" },
+    "symptoms": {
+      "ar": "مسحوق أبيض طباشيري يغطي سطح الأوراق والسيقان كأنه دقيق منثور، يعقبه اصفرار الورقة وجفافها.",
+      "en": "White, talcum-powder-like fungal patches covering leaves and petioles, leading to premature senescence."
+    },
+    "cultural_advice": {
+      "ar": "الزراعة على مسافات كافية للسماح بدخول الشمس والرياح، والتخلص من بقايا المحصول السابق.",
+      "en": "Space plants generously to promote air movement and sun exposure, and remove old crop debris."
+    },
+    "reviewed": false
+  },
+  "tomato___bacterial_spot": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "التبقع البكتيري في الطماطم", "en": "Bacterial Spot" },
+    "symptoms": {
+      "ar": "بقع بنية داكنة صغيرة مائية ذات حواف صفراء على الأوراق، قد تلتحم وتسبب احتراق الورقة.",
+      "en": "Small dark brown water-soaked lesions often surrounded by a yellow halo, coalescing to cause leaf scorch."
+    },
+    "cultural_advice": {
+      "ar": "تجنب الري العلوي تماماً، وتطهير أدوات التقليم، وتطبيق دورة زراعية لمدة موسمين على الأقل.",
+      "en": "Strictly avoid overhead watering, sanitize pruning tools between rows, and rotate fields for at least two seasons."
+    },
+    "reviewed": false
+  },
+  "tomato___early_blight": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "اللفحة المبكرة في الطماطم", "en": "Early Blight" },
+    "symptoms": {
+      "ar": "بقع بنية متدرجة بحلقات مركزية تشبه عين الثور تبدأ من الأوراق السفلية القريبة من سطح الأرض.",
+      "en": "Brown spots with concentric rings (bullseye target) starting on lower older leaves and moving upward."
+    },
+    "cultural_advice": {
+      "ar": "تقليم الأوراق السفلية الملامسة للتربة، ووضع تغطية (ملش) حول النباتات لمنع تطاير الفطر مع رذاذ الماء.",
+      "en": "Prune lower leaves touching soil, apply mulch to suppress soil splash, and stake plants for support."
+    },
+    "reviewed": false
+  },
+  "tomato___healthy": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "سليم وطبيعي", "en": "Healthy" },
+    "symptoms": {
+      "ar": "أوراق طماطم خضراء زاهية وقوية بدون أي بقع أو التفاف غير طبيعي.",
+      "en": "Vibrant, green compound leaves showing robust growth with no spotting or leaf roll."
+    },
+    "cultural_advice": {
+      "ar": "تدعيم النباتات على دعامات أو خيوط، والتسميد المتوازن بعناصر الكالسيوم والبوتاسيوم والنيتروجين.",
+      "en": "Trellis plants for good support and maintain balanced calcium, potassium, and nitrogen nutrition."
+    },
+    "reviewed": false
+  },
+  "tomato___late_blight": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "اللفحة المتأخرة في الطماطم", "en": "Late Blight" },
+    "symptoms": {
+      "ar": "بقع مائية رمادية داكنة تتسع بسرعة وتغطي الورقة، مع هيفات بيضاء رمادية تحت الورقة في الجو الرطب.",
+      "en": "Large, dark water-soaked greasy lesions spreading quickly across foliage, with delicate white fungal bloom underneath."
+    },
+    "cultural_advice": {
+      "ar": "إزالة النباتات المصابة فور اكتشافها للحد من سرعة الانتشار، وتجنب زراعة الطماطم قرب البطاطس.",
+      "en": "Promptly remove and bag diseased plants to stop spore dispersal, and do not plant tomatoes adjacent to potatoes."
+    },
+    "reviewed": false
+  },
+  "tomato___leaf_mold": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "عفن أوراق الطماطم", "en": "Leaf Mold" },
+    "symptoms": {
+      "ar": "بقع صفراء شاحبة على السطح العلوي يقابلها نمو مخملي رمادي إلى بني زيتوني كثيف على السطح السفلي.",
+      "en": "Pale yellow patches on the upper leaf surface accompanied by velvety olive-brown mold growth beneath."
+    },
+    "cultural_advice": {
+      "ar": "تهوية الصوب الزراعية باستمرار لخفض الرطوبة إلى ما دون 85%، وتوسيع المسافات بين الشتلات.",
+      "en": "Ventilate greenhouses aggressively to keep relative humidity below 85%, and increase plant spacing."
+    },
+    "reviewed": false
+  },
+  "tomato___mosaic_virus": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "فيروس موزاييك الطماطم", "en": "Tomato Mosaic Virus" },
+    "symptoms": {
+      "ar": "تبقع فسيفسائي بين الأخضر الداكن والفاتح على الأوراق، مع تشوه وتقزم الورقة (أوراق تشبه السرخس).",
+      "en": "Mottled light and dark green mosaic patterns on leaves, accompanied by distortion and fern-like dwarfing."
+    },
+    "cultural_advice": {
+      "ar": "اقتلاع النباتات المصابة والتخلص منها فوراً (لا يوجد علاج كيميائي للفيروسات)، وغسل الأيدي والأدوات بالماء والصابون.",
+      "en": "Rogue out infected plants immediately (viruses cannot be cured chemically); wash hands and tools thoroughly."
+    },
+    "reviewed": false
+  },
+  "tomato___septoria_leaf_spot": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "تبقع أوراق السبتوريا", "en": "Septoria Leaf Spot" },
+    "symptoms": {
+      "ar": "بقع دائرية صغيرة عديدة ذات حواف بنية داكنة ومركز رمادي مائل للبياض به نقاط سوداء دقيقة.",
+      "en": "Numerous small circular lesions with dark brown margins and sunken grayish-white centers containing tiny black specks."
+    },
+    "cultural_advice": {
+      "ar": "إزالة الأوراق المصابة الأولى في أسفل النبات، وتجنب العمل وسط النباتات الرطبة، واستخدام الملش العضوي.",
+      "en": "Remove first infected lower leaves, avoid handling damp plants, and mulch soil to stop splash."
+    },
+    "reviewed": false
+  },
+  "tomato___spider_mites": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "إصابة العنكبوت الأحمر", "en": "Two-Spotted Spider Mites" },
+    "symptoms": {
+      "ar": "تنقيط أصفر دقيق وشاحب على الأوراق يعطي مظهراً برونزياً، مع وجود خيوط حريرية دقيقة تشبه بيت العنكبوت أسفلها.",
+      "en": "Fine yellow stippling or bronzing on leaves with delicate webbing visible on leaf undersides in heavy infestations."
+    },
+    "cultural_advice": {
+      "ar": "رش النباتات برذاذ ماء منتظم لزيادة الرطوبة التي يكرهها العنكبوت، وتشجيع الأعداء الحيوية المفترسة له.",
+      "en": "Mist foliage to raise ambient humidity which suppresses mites, and preserve natural predatory mite populations."
+    },
+    "reviewed": false
+  },
+  "tomato___target_spot": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "التبقع الهدفى في الطماطم", "en": "Target Spot" },
+    "symptoms": {
+      "ar": "بقع بنية دائرية متحدة المركز تشبه لوحة الهدف، تتطور إلى ثقوب وتجف الأوراق تماماً.",
+      "en": "Brown circular lesions with concentric rings, advancing to necrotic perforations and extensive leaf drop."
+    },
+    "cultural_advice": {
+      "ar": "تحسين دوران الهواء بتقليم النموات الزائدة، والري عند القاعدة فقط والتخلص من بقايا المحصول المصاب.",
+      "en": "Improve canopy ventilation by pruning suckers, irrigate at base only, and clear infected crop residues."
+    },
+    "reviewed": false
+  },
+  "tomato___yellow_leaf_curl_virus": {
+    "crop_name": { "ar": "طماطم", "en": "Tomato" },
+    "disease_name": { "ar": "فيروس تجعد واصفرار أوراق الطماطم", "en": "Yellow Leaf Curl Virus (TYLCV)" },
+    "symptoms": {
+      "ar": "تقزم النبات واصفرار حواف الأوراق مع التفافها الشديد للأعلى لتأخذ شكل الفنجان، وتوقف العقد والإثمار.",
+      "en": "Severe stunting, upward cupping of leaves with pale chlorotic margins, and blossom drop."
+    },
+    "cultural_advice": {
+      "ar": "مكافحة الذبابة البيضاء الناقلة للفيروس باستخدام المصائد الصفراء والشبك الواقي في الصوب، وإتلاف النباتات المصابة.",
+      "en": "Control the whitefly vector using yellow sticky traps and fine insect mesh, and rogue out infected plants promptly."
+    },
+    "reviewed": false
+  },
+  "unknown": {
+    "crop_name": { "ar": "غير محدد / غير زراعي", "en": "Unknown / Non-Plant" },
+    "disease_name": { "ar": "صورة غير مطابقة", "en": "Unrecognized Subject" },
+    "symptoms": {
+      "ar": "الصورة لا تظهر ورقة نبات واضحة لأحد المحاصيل المدعومة في التطبيق.",
+      "en": "The image does not clearly depict a recognized foliage of the supported crops."
+    },
+    "cultural_advice": {
+      "ar": "يرجى التقاط صورة واضحة ومقربة لورقة نبات واحدة في إضاءة نهارية طبيعية بدون تشويش أو خلفيات مزدحمة.",
+      "en": "Please capture a clear, focused close-up of a single plant leaf under natural daylight with minimal background clutter."
+    },
+    "reviewed": false
+  }
+}
