@@ -44,7 +44,7 @@ OTHER_CROPS = [
 
 # Data preparation caps & thresholds
 IMAGE_SIZE = (256, 256)
-TRAIN_INPUT_SIZE = (224, 224)
+TRAIN_INPUT_SIZE = (256, 256)
 JPEG_QUALITY = 90
 
 # Definitive list of target classes (verified >= 100 training images + unknown)

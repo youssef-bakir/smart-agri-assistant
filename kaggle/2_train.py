@@ -76,13 +76,15 @@ IMAGENET_STD = [0.229, 0.224, 0.225]
 
 
 def get_train_transforms():
-    """Returns torchvision transforms for training with augmentation."""
+    """Returns robust torchvision transforms for training with enhanced augmentation."""
     from torchvision import transforms
     return transforms.Compose([
-        transforms.RandomResizedCrop(224, scale=(0.4, 1.0)),
+        transforms.RandomResizedCrop(256, scale=(0.5, 1.0)),
         transforms.RandomHorizontalFlip(),
-        transforms.RandomRotation(degrees=20),
-        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+        transforms.RandomVerticalFlip(p=0.3),
+        transforms.RandomRotation(degrees=30),
+        transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1),
+        transforms.GaussianBlur(kernel_size=(3, 3), sigma=(0.1, 2.0)),
         transforms.ToTensor(),
         transforms.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
     ])
@@ -92,7 +94,7 @@ def get_eval_transforms():
     """Returns torchvision transforms for evaluation / validation."""
     from torchvision import transforms
     return transforms.Compose([
-        transforms.Resize((224, 224)),
+        transforms.Resize((256, 256)),
         transforms.ToTensor(),
         transforms.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
     ])
@@ -285,11 +287,11 @@ def evaluate_split(model, loader, device, criterion=None):
 
 
 def export_onnx_model(model, output_path, device):
-    """Export model to ONNX format safely inside try/except."""
+    """Export model to ONNX format safely inside try/except at 256x256 resolution."""
     try:
         model.eval()
-        dummy_input = torch.randn(1, 3, 224, 224, device=device)
-        print(f"Exporting ONNX model to {output_path}...")
+        dummy_input = torch.randn(1, 3, 256, 256, device=device)
+        print(f"Exporting ONNX model to {output_path} (256x256)...")
         try:
             torch.onnx.export(
                 model,
@@ -398,14 +400,29 @@ def main():
     model = model.to(device, memory_format=torch.channels_last)
 
     criterion = nn.CrossEntropyLoss(label_smoothing=0.1)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=1e-4)
 
     max_epochs = 2 if is_smoke else args.epochs
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=max_epochs)
+    phase1_epochs = 0 if is_smoke else 2  # 2 epochs head-only warm-up
+    phase2_epochs = max_epochs - phase1_epochs
+
     try:
         scaler = torch.amp.GradScaler("cuda", enabled=(device.type == "cuda"))
     except Exception:
         scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+
+    # Initial Phase 1 Optimizer Setup: freeze backbone, train only classification head
+    if not is_smoke:
+        print(f"=== Phase 1: Freezing Backbone & Training Classification Head ({phase1_epochs} epochs) ===")
+        for name, param in model.named_parameters():
+            if "classifier" in name or "head" in name:
+                param.requires_grad = True
+            else:
+                param.requires_grad = False
+        optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=3e-4, weight_decay=1e-4)
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=max(1, phase1_epochs))
+    else:
+        optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=1e-4)
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=max_epochs)
 
     # Resume check
     start_epoch = 0
@@ -422,11 +439,25 @@ def main():
         best_val_f1 = checkpoint.get("best_val_f1", 0.0)
 
     # 4. Training Loop with Time Guard
-    print(f"Starting training: {max_epochs} epochs, batch size {batch_size} (Smoke: {is_smoke})...")
-    early_stop_patience = 3
+    print(f"Starting Robustness Training: {max_epochs} total epochs (Phase 1: {phase1_epochs}, Phase 2: {phase2_epochs}), batch size {batch_size} (Smoke: {is_smoke})...")
+    early_stop_patience = 4
     patience_counter = 0
 
     for epoch in range(start_epoch, max_epochs):
+        # Transition to Phase 2: unfreeze backbone, fine-tune all layers with differential low LR
+        if not is_smoke and epoch == phase1_epochs:
+            print(f"\n=== Phase 2: Unfreezing Backbone & Fine-Tuning Entire Model (Backbone: 1e-5, Head: 1e-4) for {phase2_epochs} epochs ===")
+            for param in model.parameters():
+                param.requires_grad = True
+            backbone_params = [p for n, p in model.named_parameters() if "classifier" not in n and "head" not in n]
+            head_params = [p for n, p in model.named_parameters() if "classifier" in n or "head" in n]
+            optimizer = torch.optim.AdamW([
+                {"params": backbone_params, "lr": 1e-5},
+                {"params": head_params, "lr": 1e-4},
+            ], weight_decay=1e-4)
+            scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=phase2_epochs, eta_min=1e-6)
+            patience_counter = 0  # Reset patience counter for Phase 2
+
         model.train()
         epoch_start_time = time.time()
         running_loss = 0.0
@@ -557,7 +588,7 @@ def main():
         import onnxruntime as ort
 
         session = ort.InferenceSession(str(onnx_path), providers=["CPUExecutionProvider"])
-        dummy_np = np.random.randn(1, 3, 224, 224).astype(np.float32)
+        dummy_np = np.random.randn(1, 3, 256, 256).astype(np.float32)
         out = session.run(None, {"input": dummy_np})
         assert len(out) > 0 and out[0].shape == (1, num_classes), "Inference shape mismatch"
         print("Model prediction verified via onnxruntime!")

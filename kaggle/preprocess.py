@@ -91,16 +91,19 @@ def preprocess_for_onnx(img: Image.Image) -> np.ndarray:
 
 def get_train_transforms():
     """
-    Returns torchvision transforms for training on GPU.
+    Returns robust torchvision transforms for training on GPU.
     Lazy imports torchvision so inference / web app doesn't require torch.
+    Enhanced augmentations simulate camera, sensor, and lighting variations.
     """
     from torchvision import transforms
 
     return transforms.Compose([
-        transforms.RandomResizedCrop(224, scale=(0.4, 1.0)),
+        transforms.RandomResizedCrop(config.TRAIN_INPUT_SIZE[0], scale=(0.5, 1.0)),
         transforms.RandomHorizontalFlip(),
-        transforms.RandomRotation(degrees=20),
-        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+        transforms.RandomVerticalFlip(p=0.3),
+        transforms.RandomRotation(degrees=30),
+        transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1),
+        transforms.GaussianBlur(kernel_size=(3, 3), sigma=(0.1, 2.0)),
         transforms.ToTensor(),
         transforms.Normalize(mean=IMAGENET_MEAN.tolist(), std=IMAGENET_STD.tolist()),
     ])
