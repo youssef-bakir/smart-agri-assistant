@@ -1,0 +1,100 @@
+{
+  "apple___scab": {
+    "reason": "low_field_recall",
+    "field_recall": 0.5833333333333334,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (58.3%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (58.3%) is below 60%; consult an agricultural specialist"
+  },
+  "pepper___healthy": {
+    "reason": "low_field_recall",
+    "field_recall": 0.5333333333333333,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (53.3%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (53.3%) is below 60%; consult an agricultural specialist"
+  },
+  "potato___early_blight": {
+    "reason": "low_field_recall",
+    "field_recall": 0.0,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (0.0%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (0.0%) is below 60%; consult an agricultural specialist"
+  },
+  "potato___healthy": {
+    "reason": "low_field_recall",
+    "field_recall": 0.1,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (10.0%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (10.0%) is below 60%; consult an agricultural specialist"
+  },
+  "potato___late_blight": {
+    "reason": "low_field_recall",
+    "field_recall": 0.29411764705882354,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (29.4%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (29.4%) is below 60%; consult an agricultural specialist"
+  },
+  "tomato___bacterial_spot": {
+    "reason": "low_field_recall",
+    "field_recall": 0.4074074074074074,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (40.7%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (40.7%) is below 60%; consult an agricultural specialist"
+  },
+  "tomato___early_blight": {
+    "reason": "low_field_recall",
+    "field_recall": 0.5,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (50.0%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (50.0%) is below 60%; consult an agricultural specialist"
+  },
+  "tomato___late_blight": {
+    "reason": "low_field_recall",
+    "field_recall": 0.26666666666666666,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (26.7%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (26.7%) is below 60%; consult an agricultural specialist"
+  },
+  "tomato___leaf_mold": {
+    "reason": "low_field_recall",
+    "field_recall": 0.5,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (50.0%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (50.0%) is below 60%; consult an agricultural specialist"
+  },
+  "tomato___mosaic_virus": {
+    "reason": "low_field_recall",
+    "field_recall": 0.5714285714285714,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (57.1%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (57.1%) is below 60%; consult an agricultural specialist"
+  },
+  "tomato___septoria_leaf_spot": {
+    "reason": "low_field_recall",
+    "field_recall": 0.4782608695652174,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (47.8%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (47.8%) is below 60%; consult an agricultural specialist"
+  },
+  "tomato___spider_mites": {
+    "reason": "low_field_recall",
+    "field_recall": 0.0,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (0.0%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (0.0%) is below 60%; consult an agricultural specialist"
+  },
+  "tomato___target_spot": {
+    "reason": "lab_only",
+    "field_recall": 0.0,
+    "is_lab_only": true,
+    "warning_ar": "هذا المرض تم تدريبه معملياً فقط، قد يقل أداؤه في الحقل",
+    "warning_en": "Trained in lab conditions only; real-world field accuracy may be lower"
+  },
+  "tomato___yellow_leaf_curl_virus": {
+    "reason": "low_field_recall",
+    "field_recall": 0.3333333333333333,
+    "is_lab_only": false,
+    "warning_ar": "دقة استدعاء هذا المرض في الحقل (33.3%) أقل من 60%، يرجى استشارة مهندس زراعي",
+    "warning_en": "Field recall for this disease (33.3%) is below 60%; consult an agricultural specialist"
+  }
+}

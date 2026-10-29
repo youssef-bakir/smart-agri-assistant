@@ -18,6 +18,7 @@ data/*
 # Models (weights and exports are stored locally / Kaggle, not in git)
 models/*
 !models/.gitkeep
+!models/*.json
 
 # Environment variables and secrets
 .env

@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-28T23:19:22.969805",
+  "model_architecture": "efficientnet_b0",
+  "num_classes": 30,
+  "epochs_trained": 12,
+  "best_val_f1": 0.69516125081334,
+  "device": "cuda",
+  "smoke": false
+}
